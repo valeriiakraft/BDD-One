@@ -2,9 +2,12 @@
 import Data.DataHelper;
 import PageObjects.DashBoardPage;
 import PageObjects.LoginPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 
 import static Data.DataHelper.CardInfo.*;
 import static Data.DataHelper.TransferAmount.getInvalidTransferAmount;
@@ -19,6 +22,7 @@ public class TransfersTest {
 
     static LoginPage loginPage;
     static DashBoardPage dashBoardPage;
+
 
     @BeforeEach
     void setup() {
